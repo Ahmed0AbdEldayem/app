@@ -29,8 +29,8 @@ class MyGridLayout(GridLayout):
     def sendsms(self, needed):
         message = self.sms.text
         text = client.messages.create(
-            to='+201091208115',
-            from_='+12109038295',
+            to= '',
+            from_= '',
             body=message)
         print('Message sent successfully.')
 
@@ -38,8 +38,8 @@ class MyGridLayout(GridLayout):
         voice_message = self.call.text
         client.calls.create(
             record=True,
-            to="+201091208115",
-            from_='+12109038295',
+            to= '',
+            from_= '',
             twiml='<Response><Say>{}</Say></Response>'.format(voice_message))
         print('Call made successfully.')
 
